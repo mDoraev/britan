@@ -1,0 +1,431 @@
+<?php
+// @codingStandardsIgnoreFile
+
+/**
+ * @var Infortis\Base\Block\Html\Header\Logo $block
+ */
+?>
+<?php
+    $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();
+?>
+<?php if ($block->isHomePage()):?>
+    <h1 class="logo">
+        <a href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+            <strong><?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?></strong>
+            <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+                 alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+                 <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+                 <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+            />
+        </a>
+    </h1>
+<?php else: ?>
+        <a class="logo" href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+            <strong><?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?></strong>
+            <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+                 alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+                 <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+                 <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+            />
+        </a>
+<?php endif?>
+
+
+
+
+<!-- MAIN -->
+<style>
+
+.product-view .swatch-attribute.type .swatch-option {
+    min-width: 180px;
+    height: 30px;
+    line-height: 30px !important;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-color: #44aefb;
+    color: #fff;
+    background: #30a5ff;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.product-view .swatch-attribute.dosage .swatch-option {
+    min-width: 100px;
+    height: 30px;
+    line-height: 30px !important;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-color: #44aefb;
+    color: #fff;
+    background: #30a5ff;
+    padding: 10px;
+    font-size: 13px;
+}
+.swatch-attribute.package_size select {
+    background: #30a5ff;
+    border: 1px solid #30a5ff;
+    height: 47px;
+    color: #fff;
+    line-height: 1.82857143;
+    width: 180px;
+}
+
+.swatch-attribute .swatch-option {
+    border: 0px solid rgba(0,0,0,0);
+}
+
+.swatch-attribute-selected-option {
+    display: none;
+}
+.swatch-option.selected, .swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected, .swatch-option:not(.disabled):hover, .swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
+    outline-color: #30a5ff;
+    outline: none;
+}
+.swatch-option.text.selected {
+    background-color: #30a5ff !important;
+}
+.swatch-option.text.selected:after {
+content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 14px;
+    position: absolute;
+    top: -8px;
+    right: -7px;
+    color: #44aefb;
+    background: #fff;
+    border-radius: 85px;
+    padding: 0px 5px 0px 5px;
+}
+.swatch-attribute-label {
+    position: relative;
+    display: block;
+    width: auto;
+    padding: 0;
+    color: #033b59;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 15px 0 15px 0;
+}
+.swatch-option.selected, .swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected, .swatch-option:not(.disabled):hover, .swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
+    outline-color: #30a5ff;
+    outline: none;
+}
+.swatch-attribute .swatch-option:not(.disabled):hover, .swatch-attribute .swatch-option.color:not(.disabled):hover {
+    border: 0px solid rgba(0,0,0,0);
+}
+
+.product p  {
+    line-height: 25px !important;
+}
+
+
+
+
+@media (min-width: 768px) {
+.product.data.items.style-luma.show-tabs>.item.content {
+    background: transparent !important;
+    margin-top: 43px;
+    padding: 35px 35px 35px 35px;
+    border: 0px solid #d1d1d1 !important;
+}
+.product.data.items.style-luma.show-tabs>.item.title>.switch {
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 1.4rem;
+    color: #7d7d7d;
+    text-decoration: none;
+    background: transparent !important;
+    border: 0px solid #d1d1d1 !important;
+    border-bottom: none;
+    height: 54px !important;
+    padding: 1px 35px 1px 35px;
+}
+.product.data.items.style-luma.show-tabs>.item.content {
+    margin-top: 20px;
+    box-sizing: border-box;
+    float: right !important;
+    margin-left: -100%;
+    width: 79% !important;
+}
+.product.data.items.style-luma.show-tabs>.item.title {
+    float: none !important;
+    width: 20% !important;
+}
+
+.product #product_cms_block2 {margin-top:-250px;display:none;}
+.product #reviews{margin-top: -130px; display:none;}
+.product #product_cms_block1 {margin-top: -190px; display:none;}
+.product #description {margin-top: -80px; }
+.product-lower-primary-column{background: #e2f3fe;padding: 50px 0px;}
+.product.data.items.style-luma .item.title>.switch strong {
+    font-weight: normal;
+    font-size: 20px;
+}
+.product.data.items.style-luma.show-tabs>.item.title:not(.disabled)>.switch:active, .product.data.items.style-luma.show-tabs>.item.title.active>.switch, .product.data.items.style-luma.show-tabs>.item.title.active>.switch:focus, .product.data.items.style-luma.show-tabs>.item.title.active>.switch:hover {
+    color: #30a5ff !important;
+}
+
+.data.item.title.active:after {
+content: "\f054";
+    font-family: FontAwesome;
+    font-size: 14px;
+    position: absolute;
+    font-weight: 400;
+    top: 14px;
+    left: 200px;
+    margin-left: 3px;
+    color: #30a5ff;
+}
+}
+
+
+/*MAIN*/
+.js-left-banner{
+    width: 45%;
+    float: left;
+    padding: 40px;
+    box-sizing: border-box;
+    display: none;
+}
+.main-top-container .js-left-banner{
+display: block;
+    }
+    .js-conditions{
+        display: none;
+        clear: both;
+        padding: 40px 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .main-top-container .js-conditions{
+        display: block;
+    }
+.slideshow-wrapper-additional{
+    width: 49%;
+    float: right;
+}
+.slideshow-wrapper-additional img{
+    max-width: 600px;
+}
+.slideshow-wrapper-additional .owl-item{
+    max-width: 100%;
+}
+.owl-buttons{
+    display: none;
+}
+.js-left-banner{
+    width: 45%;
+    float: left;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.HomeCarousel-navItem-12D h3 {
+    padding-top: 0;
+    margin-bottom: 5px;
+    /*font-family: Apercu;*/
+}
+.HomeCarousel-navItem-12D:before {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 1;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 50%;
+    background: #476ce1;
+    content: counter(my-awesome-counter);
+    text-align: center;
+    /*font-family: Apercu;*/
+    font-weight: 300;
+    color: #fff;
+}
+@media only screen and (min-width: 850px){
+    .HomeCarousel-navItem-12D:before {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 22px;
+   
+    margin-bottom: 40px;
+    background: #fff;
+    color: #020134;
+    border: 1px solid #d8e5e8;
+    -webkit-animation-name: HomeCarousel-carousel-counter-3sQ;
+    animation-name: HomeCarousel-carousel-counter-3sQ;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+    .HomeCarousel-navItem-12D h3 {
+    font-size: 22px !important;
+    line-height: 27px;
+}
+  .HomeCarousel-infoInner-1SG {
+    max-width: 440px;
+}  
+}
+.HomeCarousel-slideHeading-1-9 em {
+    font-style: normal;
+    color: #476ce1;
+}
+.HomeCarousel-info-1ug h1 {
+    margin-bottom: 1rem;
+    padding-top: 0;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+.HomeCarousel-nav-2Ty {
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    counter-reset: my-awesome-counter;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d8e5e8;
+    overflow-x: hidden;
+}
+.HomeCarousel-navItem-12D {
+    position: relative;
+    /*padding-left: 60px;*/
+    padding: 40px;
+    box-sizing: border-box;
+    counter-increment: my-awesome-counter;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 850px){
+
+.HomeCarousel-nav-2Ty {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 60px;
+    margin-top: -26px;
+        justify-content: space-around;
+}
+}
+@media only screen and (min-width: 850px){
+
+.HomeCarousel-navItem-12D {
+    padding-left: 0;
+    margin-bottom: 0;
+    width: calc(33.3333% - 13.33333px);
+}
+
+}
+@media only screen and (min-width: 1000px){
+.HomeCarousel-nav-2Ty {
+    grid-column-gap: 80px;
+}
+.HomeCarousel-navItem-12D {
+    width: calc(33.3333% - 53.33333px);
+}
+}
+
+@keyframes conditionsLineA{
+  0%  { width: 0%; }
+  100% { width: 35%; }
+}
+@keyframes conditionsLineB{
+  0%  { width: 35%; }
+  100% { width: 73%; }
+}
+@keyframes conditionsLineC{
+  0%  { width: 73%; }
+  100% { width: 105%; }
+}
+
+.js-line-cont{
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+.anim-conditionsLine1{
+    animation: conditionsLineA;
+
+}
+.anim-conditionsLine2{
+    width: 35%;
+    animation: conditionsLineB;
+
+}
+.anim-conditionsLine3{
+    width: 73%;
+    animation: conditionsLineC;
+
+}
+.anim-conditionsLine{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 0;
+    height: 2px;
+      background-color: #476ce1;
+      margin-bottom: -70px;
+
+    animation-duration: 7.9s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+.HomeCarousel-navItem-12D.conditions_act-circle:before{
+    color: #fff;
+      background-color: #476ce1;
+      border: none;
+
+}
+</style>
+<!-- left banner -->
+<div class="js-left-banner">
+    <div class="HomeCarousel-info-1ug">
+    <div class="HomeCarousel-infoInner-1SG">
+    <h1 class="HomeCarousel-slideHeading-1-9">
+    Medicine delivered <em>discreetly</em> to your door</h1>
+    <p>Get the same genuine medicines delivered to your door in 
+    as little as 24 hours as you would from your GP - without the wait.</p>
+    </div>
+    </div>
+    </div>
+
+<!-- conditions -->
+<div class="js-conditions">
+<div class="js-line-cont"><div class="js-line"></div></div>
+
+<ol class="HomeCarousel-nav-2Ty"><li class="HomeCarousel-navItem-12D "><h3>Choose your treatment</h3><p>Sit back, relax and choose your one-off or subscription of medication on any device from anywhere.</p></li><li class="HomeCarousel-navItem-12D"><h3>Complete a consultation</h3><p>With complete privacy and confidentiality your form is checked by our partner GMC UK Regulated doctor and then dispensed by UK Meds Pharmacy</p></li><li class="HomeCarousel-navItem-12D"><h3>Receive your delivery</h3><p>With same day service in parts of the UK, you can have your treatment delivery discreetly within hours.</p></li></ol>
+</div>
+<script>
+    //<![CDATA[
+
+requirejs(['jquery'], function(jQuery) {
+    jQuery(function($) {
+        // for home page
+        if($('body').hasClass('cms-index-index')){
+
+var leftBanner = $('.js-left-banner');
+var slider = $('.slideshow-wrapper-additional');
+var wrapper = $('.main-top-container');
+wrapper.addClass('container');
+slider.before(leftBanner);
+
+var conditions = $('.js-conditions');
+wrapper.append(conditions);
+
+
+
+
+
+
+
+
+}
+    });
+    });
+
+
+</script>
