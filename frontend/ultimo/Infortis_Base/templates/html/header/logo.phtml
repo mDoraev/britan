@@ -36,149 +36,6 @@
 <!-- MAIN -->
 <style>
 
-.product-view .swatch-attribute.type .swatch-option {
-    min-width: 180px;
-    height: 30px;
-    line-height: 30px !important;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    border-color: #44aefb;
-    color: #fff;
-    background: #30a5ff;
-    padding: 10px;
-    font-size: 13px;
-}
-
-.product-view .swatch-attribute.dosage .swatch-option {
-    min-width: 100px;
-    height: 30px;
-    line-height: 30px !important;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    border-color: #44aefb;
-    color: #fff;
-    background: #30a5ff;
-    padding: 10px;
-    font-size: 13px;
-}
-.swatch-attribute.package_size select {
-    background: #30a5ff;
-    border: 1px solid #30a5ff;
-    height: 47px;
-    color: #fff;
-    line-height: 1.82857143;
-    width: 180px;
-}
-
-.swatch-attribute .swatch-option {
-    border: 0px solid rgba(0,0,0,0);
-}
-
-.swatch-attribute-selected-option {
-    display: none;
-}
-.swatch-option.selected, .swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected, .swatch-option:not(.disabled):hover, .swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
-    outline-color: #30a5ff;
-    outline: none;
-}
-.swatch-option.text.selected {
-    background-color: #30a5ff !important;
-}
-.swatch-option.text.selected:after {
-content: "\f00c";
-    font-family: FontAwesome;
-    font-size: 14px;
-    position: absolute;
-    top: -8px;
-    right: -7px;
-    color: #44aefb;
-    background: #fff;
-    border-radius: 85px;
-    padding: 0px 5px 0px 5px;
-}
-.swatch-attribute-label {
-    position: relative;
-    display: block;
-    width: auto;
-    padding: 0;
-    color: #033b59;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 15px 0 15px 0;
-}
-.swatch-option.selected, .swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected, .swatch-option:not(.disabled):hover, .swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
-    outline-color: #30a5ff;
-    outline: none;
-}
-.swatch-attribute .swatch-option:not(.disabled):hover, .swatch-attribute .swatch-option.color:not(.disabled):hover {
-    border: 0px solid rgba(0,0,0,0);
-}
-
-.product p  {
-    line-height: 25px !important;
-}
-
-
-
-
-@media (min-width: 768px) {
-.product.data.items.style-luma.show-tabs>.item.content {
-    background: transparent !important;
-    margin-top: 43px;
-    padding: 35px 35px 35px 35px;
-    border: 0px solid #d1d1d1 !important;
-}
-.product.data.items.style-luma.show-tabs>.item.title>.switch {
-    font-weight: 400;
-    line-height: 40px;
-    font-size: 1.4rem;
-    color: #7d7d7d;
-    text-decoration: none;
-    background: transparent !important;
-    border: 0px solid #d1d1d1 !important;
-    border-bottom: none;
-    height: 54px !important;
-    padding: 1px 35px 1px 35px;
-}
-.product.data.items.style-luma.show-tabs>.item.content {
-    margin-top: 20px;
-    box-sizing: border-box;
-    float: right !important;
-    margin-left: -100%;
-    width: 79% !important;
-}
-.product.data.items.style-luma.show-tabs>.item.title {
-    float: none !important;
-    width: 20% !important;
-}
-
-.product #product_cms_block2 {margin-top:-250px;display:none;}
-.product #reviews{margin-top: -130px; display:none;}
-.product #product_cms_block1 {margin-top: -190px; display:none;}
-.product #description {margin-top: -80px; }
-.product-lower-primary-column{background: #e2f3fe;padding: 50px 0px;}
-.product.data.items.style-luma .item.title>.switch strong {
-    font-weight: normal;
-    font-size: 20px;
-}
-.product.data.items.style-luma.show-tabs>.item.title:not(.disabled)>.switch:active, .product.data.items.style-luma.show-tabs>.item.title.active>.switch, .product.data.items.style-luma.show-tabs>.item.title.active>.switch:focus, .product.data.items.style-luma.show-tabs>.item.title.active>.switch:hover {
-    color: #30a5ff !important;
-}
-
-.data.item.title.active:after {
-content: "\f054";
-    font-family: FontAwesome;
-    font-size: 14px;
-    position: absolute;
-    font-weight: 400;
-    top: 14px;
-    left: 200px;
-    margin-left: 3px;
-    color: #30a5ff;
-}
-}
-
-
 /*MAIN*/
 .js-left-banner{
     width: 45%;
@@ -380,6 +237,132 @@ display: block;
       border: none;
 
 }
+.js-btn-account{
+    background-color: inherit;
+    font-weight: normal;
+    font-size: inherit;
+    color: #333;
+}
+.js-btn-account:hover{
+    color: #fff !important;
+    background-color: #30a5ff;
+}
+
+
+/*li:nth-child(2) .nav-panel{
+    display: block !important;
+    border: 0 !important;
+    box-shadow: none !important;;;
+}
+.sticky-header .sticky-container{
+    position: relative !important;
+}*/
+
+a:hover{
+    color: #20247d;
+}
+#mainmenu>ul>li:hover>.megamenu-wrap>.nav-panel{
+display: block;
+}
+#mainmenu>ul>li>.megamenu-wrap>.nav-panel{
+        height: 330px !important;
+        padding: 30px !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+        max-height: 50vh;
+        width: 75% !important;
+
+}
+#mainmenu>ul>li>.nav-panel.megamenu-wrap{
+    padding: 30px;
+    margin-top: 20px;
+    overflow: hidden !important;
+     -webkit-box-shadow: 0 0 20px 5px rgba(0,0,0,.5) !important;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,.5) !important;
+  position: absolute !important;
+  min-height: 330px;
+}
+.nav-panel{
+    width: 100% !important;
+    left: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+}
+.nav-panel .nav-panel{
+    height: auto !important;
+    overflow: hidden;
+    padding: 0 !important;
+}
+.nav-panel .caret{
+    display: none !important;
+}
+.nav-panel li.level1{
+width: 30%;
+float: left;
+margin-bottom: 40px;
+}
+.nav-panel li.level2{
+/*display: inline-block;*/
+margin-right: 15px;
+display: none;
+}
+.nav-panel li.level2:nth-child(1),
+.nav-panel li.level2:nth-child(2),
+.nav-panel li.level2:nth-child(3){
+display: inline-block;
+}
+.nav-panel li.level1>a{
+font-size: 15px;
+/*font-size: 18px;*/
+
+margin-bottom: 10px;
+cursor: auto;
+font-weight: bold;
+padding-left: 0 !important;
+}
+.nav-panel li.level2>a{
+font-size: 14px;
+/*font-size: 15px;*/
+
+padding-left: 0 !important;
+
+}
+ul.nav-panel li a:hover{
+text-decoration: underline;
+color: #20247d !important;
+
+}
+ul.nav-panel li.level1 a:hover{
+text-decoration: none;
+}
+.nav-panel li ul{
+    display: block !important;
+    opacity: 1 !important;
+    position: static !important;
+}
+ul.nav-panel.level2{
+    display: none !important;
+}
+.megamenu-aside{
+    display: none;
+}
+.megamenu-wrap .megamenu-aside{
+    display: block;
+    width: 25%;
+    height: 100%;
+    background-color: #3035ba;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    right: 0;
+    /*z-index: 100;*/
+    padding: 30px;
+
+}
+.megamenu-wrap .megamenu-aside h3{
+color: #fff;
+font-size: 18px;
+}
 </style>
 <!-- left banner -->
 <div class="js-left-banner">
@@ -399,14 +382,24 @@ display: block;
 
 <ol class="HomeCarousel-nav-2Ty"><li class="HomeCarousel-navItem-12D "><h3>Choose your treatment</h3><p>Sit back, relax and choose your one-off or subscription of medication on any device from anywhere.</p></li><li class="HomeCarousel-navItem-12D"><h3>Complete a consultation</h3><p>With complete privacy and confidentiality your form is checked by our partner GMC UK Regulated doctor and then dispensed by UK Meds Pharmacy</p></li><li class="HomeCarousel-navItem-12D"><h3>Receive your delivery</h3><p>With same day service in parts of the UK, you can have your treatment delivery discreetly within hours.</p></li></ol>
 </div>
+<!-- megamenu right aside -->
+<aside class="megamenu-aside">
+    <h3>Related Help & Advice</h3>
+
+</aside>
+
+
 <script>
     //<![CDATA[
 
 requirejs(['jquery'], function(jQuery) {
+
+
     jQuery(function($) {
+
         // for home page
         if($('body').hasClass('cms-index-index')){
-
+// slider
 var leftBanner = $('.js-left-banner');
 var slider = $('.slideshow-wrapper-additional');
 var wrapper = $('.main-top-container');
@@ -415,15 +408,49 @@ slider.before(leftBanner);
 
 var conditions = $('.js-conditions');
 wrapper.append(conditions);
-
-
-
-
-
-
-
-
 }
+
+// header account links
+                        function showAccountForm(){
+                            console.log('showAccountForm');
+    // var that = $(this);
+
+    
+}
+$('#header-account').find('a').each(function(){
+
+
+    var that = $(this);
+    var text = $.trim(that.text());
+    var accountText = 'my account';
+    var createAccountText = 'create an account';
+    text = text.toLowerCase();
+    if(text == accountText){
+
+that.hide();
+var url = that.attr('href');
+console.log(url);
+that.after('<button class="js-btn-account">'+that.text()+'</button>');
+
+var but = $('.js-btn-account');
+but.on('click', function(){
+    showAccountForm();
+})
+    }
+    if(text == createAccountText){
+        that.hide();
+    }
+});
+
+// megamenu
+var megamenuUL = $('#mainmenu>ul>li>.nav-panel');
+var megamenuULclass = megamenuUL.attr('class');
+megamenuUL.wrap('<div class="'+megamenuULclass+' megamenu-wrap"></div');
+var megamenuCont = $('.megamenu-wrap');
+var megamenuAside = $('.megamenu-aside');
+megamenuCont.append(megamenuAside);
+
+
     });
     });
 
