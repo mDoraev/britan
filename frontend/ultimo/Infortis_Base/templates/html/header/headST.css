@@ -1,0 +1,25 @@
+#mainmenu>ul>li:nth-child(2)>.megamenu-wrap{
+	display: block !important;
+	opacity: 1 !important;
+}
+.megamenu_bottom{
+	border-top: 1px solid #d8e5e8;
+	width: 75%;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	bottom: 0;
+	padding: 20px 30px;
+	box-sizing: border-box;
+}
+.megamenu_bottom_condition{
+width: 33%;
+float: left;
+}
+.megamenu_bottom_condition:after{
+
+}
+.megamenu_img{
+	width: 32px;
+	height: auto;
+}
