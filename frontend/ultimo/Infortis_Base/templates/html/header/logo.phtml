@@ -400,16 +400,17 @@ font-size: 18px;
 }*/
 .megamenu_bottom{
     border-top: 1px solid #d8e5e8;
-    width: 73%;
+    width: 100%;
     position: absolute;
     z-index: 200;
     left: 0;
     bottom: 0;
     /*padding: 20px 30px;*/
     box-sizing: border-box;
+    background-color: transparent;
 }
 .megamenu_bottom_condition{
-width: 33%;
+width: 25%;
 float: left;
 position: relative;
 display: -webkit-box;
@@ -448,6 +449,16 @@ top: 20px;
 }
 .megamenu_bottom_condition:last-child:after{
     display: none;
+}
+.nav-panel li.level1>a.js-megamenu_link-all{
+    color: #d83e00;
+    text-decoration: underline;
+    font-weight: 400;
+
+}
+.nav-panel li.level1>a.js-megamenu_link-all:hover{
+    text-decoration: underline;
+
 }
 </style>
 <!-- left banner -->
@@ -550,6 +561,22 @@ var megamenuAside = $('.megamenu-aside');
 var megamenuBottom = $('.megamenu_bottom');
 megamenuCont.append(megamenuAside);
 megamenuCont.append(megamenuBottom);
+// megamenu add link ALL
+var megamenuULparent = $('.level0.nav-panel');
+megamenuULparent.children('li.level1').each(function(){
+var that = $(this);
+var href = that.children('a').attr('href');
+var length = that.children('ul.level1').children('li.level2').length;
+if(length>3){
+var newLink = '<a href="'+href+'" class="js-megamenu_link-all">View more('+length+')</a>';
+that.append(newLink);
+}
+
+// that.append(href);
+// that.append(length);
+// console.log('href '+href);
+// console.log('length '+length);
+});
 
 
 
