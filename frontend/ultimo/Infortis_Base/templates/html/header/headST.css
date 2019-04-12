@@ -6,7 +6,7 @@
 display: block !important;
 }
 */
-#newsletter-validate-detail{
+/*#newsletter-validate-detail{
 	position: relative;
 }
 #newsletter-validate-detail button{
@@ -28,4 +28,10 @@ display: none;
 .js-new-footer .ic-instagram:before{
 	width: 30px;
 	height: auto;
-}
+}*/
+    .js-new-footer_left,
+    .js-new-footer_right{
+        float: none;
+        width: 100%;
+        border: none !important;
+    }

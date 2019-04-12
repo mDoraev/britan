@@ -200,7 +200,11 @@ display: block;
   0%  { width: 73%; }
   100% { width: 105%; }
 }
-
+.js-line{
+    height: 2px;
+    background-color: #30a5ff;
+    margin-bottom: -69px;
+}
 .js-line-cont{
     padding: 0 50px;
     box-sizing: border-box;
@@ -500,13 +504,20 @@ top: 20px;
 }
 
 /*footer*/
+.page-footer{
+    /*border-top: #d8e5e8 solid 1px;*/
+    background-color: #fff;
+
+}
 .js-new-footer{
     position: relative;
     overflow: hidden;
     /*padding-bottom: 50px;*/
     box-sizing: border-box;
-    border-top: #d8e5e8 solid 1px;
-    background-color: #fff;
+    background-color: inherit;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*border-top: #d8e5e8 solid 1px;*/
 
 
 }
@@ -514,6 +525,7 @@ top: 20px;
     position: absolute;
     left: 40px;
     bottom: 40px;
+    width: 40%;
 }
 .js-new-footer_left,
 .js-new-footer_right{
@@ -521,6 +533,8 @@ width: 50%;
 float: left;
 padding: 20px;
 box-sizing: border-box;
+    border-top: #d8e5e8 solid 1px;
+
 }
 .js-new-footer_box{
     padding: 20px;
@@ -606,7 +620,96 @@ font-size: 30px;
 .js-new-footer .ic-instagram:before{
 color: rgb(255, 0, 0);
 }
+.js-img-pay img{
+    width: 66px;
+    margin-right: 20px;
+}
+#newsletter{
+    font-size: 16px;
+}
+.js-new-footer .newsletter{
+    margin-bottom: 17px;
+    margin-top: -25px;
+}
+small{
+    font-size: 14px;
+}
+small.copiright{
+    font-size: 15px;
+}
+.js-new-footer ul.bullet{
+    float: left;
+    margin-bottom: 0;
+}
+.js-new-footer ul.bullet:last-child{
+margin-left: 40px;
+}
+.js-new-footer ul.bullet li{
+    margin-bottom: 30px;
+}
+@media(max-width: 920px){
+   .js-new-footer ul.bullet{
+    float: none;
+
+}
+    .js-new-footer .bullet:last-child{
+        float: right;
+    }
+.js-new-footer ul.bullet:last-child{
+margin-left: 0;
+} 
+}
+@media(max-width: 780px){
+    .js-img-pay img{
+    margin-bottom: 10px;
+}
+
+
+}
+@media(max-width: 720px){
+    .js-new-footer .social-links:before{
+        float: none;
+    }
+}
+@media(max-width: 640px){
+        .js-new-footer_left,
+    .js-new-footer_right{
+        float: none;
+        width: 100%;
+        border: none !important;
+    }
+    .js-new-footer{
+        padding-bottom: 50px;
+    }
+  .footer-copyright{
+        width: 80%;
+        text-align: center;
+    }
+    .js-new-footer_right{
+        margin-top: -70px;
+    }
+
+
+.js-new-footer .social-links:before{
+    text-align: center;
+}
+    .js-new-footer h6{
+    text-align: center;
+}
+}
+@media(max-width: 400px){
+    .js-new-footer{
+        padding-bottom: 70px;
+    }
+}
 </style>
+<!-- images for footer -->
+<div class="js-img-pay abstract-el">
+    <img src="<?php echo $this->getViewFileUrl('images/paym.png'); ?>" alt="Payment">
+    <img src="<?php echo $this->getViewFileUrl('images/amerexp.png'); ?>" alt="American Express">
+    <img src="<?php echo $this->getViewFileUrl('images/visa.png'); ?>" alt="Visa">
+
+</div>
 <!-- left banner -->
 <div class="js-left-banner">
     <div class="HomeCarousel-info-1ug">
@@ -726,7 +829,7 @@ that.append(newLink);
 
 // footer
 $('.page-footer .footer-container2').hide();
-$('.page-footer').append('<div class="js-new-footer"></div>');
+$('.page-footer').append('<div class="js-new-footer container"></div>');
 var footerWrap = $('.js-new-footer');
 footerWrap.append('<div class="js-new-footer_left"></div>');
 footerWrap.append('<div class="js-new-footer_right"></div>');
@@ -742,16 +845,22 @@ function addToFooterRight(el){
     var footerRightBox = $('.js-new-footer_right .js-new-footer_box:last-child');
 footerRightBox.append($(el));
 }
-addToFooterRight('.page-footer .grid12-3:last-child .mobile-collapsible');
+function abstractWrap(el){
+$(el).wrap('<div class="abstract-wrap"></div>');
+}
+// addToFooterRight('.page-footer .grid12-3:last-child .mobile-collapsible');
+addToFooterRight('.page-footer .bullet');
 addToFooterRight('.page-footer #newsletter-validate-detail');
-// footerWrap.append($('.page-footer .grid12-3:last-child .mobile-collapsible'));
+$('.js-new-footer #newsletter-validate-detail').parent().append('<small>No spam ever. Just Monthly updates and insights.</small>')
 
-addToFooterLeft('.footer-bottom-container .item-right');
+addToFooterLeft('.js-img-pay');
 addToFooterLeft('.page-footer .social-links');
-
 addToFooterLeft('.footer-bottom-container .item-left');
-
-footerLeft.find('.item-right').parent().prepend('<h6 class="block-title heading">Payment options</h6>');
+var imgPay = $('.js-new-footer .js-img-pay');
+abstractWrap(imgPay);
+imgPay.parent().prepend('<h6 class="block-title heading">Payment options</h6>');
+$('.js-new-footer .bullet').parent().prepend('<h6 class="block-title heading">Information</h6>');
+// footerLeft.find('.item-right').parent().prepend('<h6 class="block-title heading">Payment options</h6>');
 // submit button styleS
 var svgBtnHtml = '<svg id="svg-email" width="20px" viewBox="0 0 22 22" "><title>send-email-2</title><path d="M1.364 3.494a1.364 1.364 0 0 1 1.793-1.89l17.286 8.782a.682.682 0 0 1 0 1.216L3.157 20.395a1.364 1.364 0 0 1-1.793-1.89l4.598-7.51-4.598-7.5zm19.45 7.5H5.958" stroke="#020134" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
 var footerBtn = $('#newsletter-validate-detail button');
