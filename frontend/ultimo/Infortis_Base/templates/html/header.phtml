@@ -438,18 +438,27 @@
                         </div> <!-- end: central column -->
                     <?php endif; ?>
 
-                    <?php if (isset($grid['primRightCol'])): ?>
+
+
+                    <!-- <?php if (isset($grid['primRightCol'])): ?> -->
+
                         <!-- Right column -->
-                        <div class="hp-block right-column <?php echo $grid['primRightCol']; ?>">
-                            <?php echo $this->getChildHtml('container_header_primary_right_1'); ?>
-                            <?php if (isset($html['primRightCol'])): ?>
-                                <?php foreach ($html['primRightCol'] as $element): ?>
-                                    <div class="item"><?php echo $element; ?></div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div> <!-- end: right column -->
-                    <?php endif; ?>
-                    
+                        
+                        <!-- <div class="hp-block right-column <?php echo $grid['primRightCol']; ?>"> -->
+                            <!-- <?php echo $this->getChildHtml('container_header_primary_right_1'); ?> -->
+                            <!-- <?php if (isset($html['primRightCol'])): ?> -->
+                                <!-- <?php foreach ($html['primRightCol'] as $element): ?> -->
+                                    <!-- <div class="item"><?php echo $element; ?></div> -->
+                                <!-- <?php endforeach; ?> -->
+                            <!-- <?php endif; ?> -->
+                        <!-- </div>  -->
+
+                        <!-- end: right column -->
+                    <!-- <?php endif; ?> -->
+                     <div class="hp-block right-column grid12-3">
+                     </div>
+
+
                 </div> <!-- end: hp-blocks-holder -->
 
             </div> <!-- end: inner-container -->

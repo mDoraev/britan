@@ -29,9 +29,11 @@ display: none;
 	width: 30px;
 	height: auto;
 }*/
-    .js-new-footer_left,
-    .js-new-footer_right{
-        float: none;
-        width: 100%;
-        border: none !important;
-    }
+.kbase-category-view .kb-category__grid section:nth-child(1),
+.kbase-category-view .kb-category__grid section:nth-child(3),
+.kbase-category-view .kb-category__grid section:nth-child(5),
+.kbase-category-view .kb-category__grid section:nth-child(6),
+.kbase-category-view .kb-category__grid section:nth-child(2){
+/*display: none;*/
+border: red solid;
+}
