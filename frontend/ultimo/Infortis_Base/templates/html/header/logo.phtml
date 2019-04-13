@@ -702,7 +702,46 @@ margin-left: 0;
         padding-bottom: 70px;
     }
 }
+.header-primary-container svg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.header-top-container #header-account{
+    display: none;
+}
+.header-primary-container #header-account{
+display: block;
+    }
+.header-top-container li a:hover,
+.header-primary-container li button:hover,
+.header-primary-container li a:hover{
+    text-decoration: underline;
+    color: #333 !important;
+    background-color: initial;
+}
+.links-wrapper-separators .links>li>*, 
+.links-wrapper-separators-left .links>li>*{
+    background-image: none;
+}
+.links-wrapper-separators-left .links>li{
+    margin-left: 0;
+}
+.header-primary-container .right-column{
+    min-width: 310px;
+}
 </style>
+<!-- icons for header -->
+<div class="js-icon-hosp hide">
+    <svg class="svg-hospital" viewBox="0 0 20.6 19.1" width="22" height="22"><path class="st0" d="M16.8 4h-1.7V2.1C15.1.9 14.2 0 13 0H7.6C6.4 0 5.5.9 5.5 2.1V4H3.8C1.7 4 0 5.7 0 7.8v7.5c0 2.1 1.7 3.8 3.8 3.8h13.1c2.1 0 3.8-1.7 3.8-3.8V7.8C20.6 5.7 18.9 4 16.8 4zM7 2.1c0-.3.3-.6.6-.6H13c.3 0 .6.3.6.6V4H7V2.1zm12.1 13.2c0 1.2-1 2.2-2.2 2.2H3.8c-1.2 0-2.2-1-2.2-2.2V7.8c0-1.2 1-2.2 2.2-2.2h13.1c1.2 0 2.2 1 2.2 2.2v7.5z"></path><path class="st0" d="M13 10.8h-2v-2c0-.4-.3-.8-.8-.8s-.7.4-.7.8v1.9h-2c-.4 0-.8.3-.8.8s.3.8.8.8h2v2c0 .4.3.8.8.8s.8-.3.8-.8v-2h2c.4 0 .8-.3.8-.8s-.5-.7-.9-.7z"></path></svg>
+
+</div>
+<div class="js-icon-account hide">
+    <svg class="svg-user" viewBox="0 0 22 22" width="22" height="22"><title>single-neutral-circle</title><g transform="translate(1 1)" stroke="#020134" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8.125" r="4.375"></circle><circle cx="10" cy="10" r="9.375"></circle><path d="M15.76 17.397a8.122 8.122 0 0 0-11.52 0"></path></g></svg>
+</div>
+
+
 <!-- images for footer -->
 <div class="js-img-pay abstract-el">
     <img src="<?php echo $this->getViewFileUrl('images/paym.png'); ?>" alt="Payment">
@@ -756,6 +795,9 @@ requirejs(['jquery'], function(jQuery) {
 
     jQuery(function($) {
 
+
+
+
         // for home page
         if($('body').hasClass('cms-index-index')){
 // slider
@@ -776,22 +818,28 @@ wrapper.append(conditions);
 
     
 }
+// add icons for links in the header, add alt. button MY ACCOUNT
+
+// $('.header-top-container .left-column ul li a').prepend($('.js-icon-hosp').html());
+
 $('#header-account').find('a').each(function(){
 
 
     var that = $(this);
+    that.prepend($('.js-icon-hosp').html());
     var text = $.trim(that.text());
     var accountText = 'my account';
+    var signInText = 'sign in';
     var createAccountText = 'create an account';
     text = text.toLowerCase();
     if(text == accountText){
-
 that.hide();
 var url = that.attr('href');
 console.log(url);
 that.after('<button class="js-btn-account">'+that.text()+'</button>');
 
 var but = $('.js-btn-account');
+but.prepend($('.js-icon-account').html());
 but.on('click', function(){
     showAccountForm();
 })
@@ -799,8 +847,14 @@ but.on('click', function(){
     if(text == createAccountText){
         that.hide();
     }
-});
+       if(text == signInText){
+        that.hide();
+    }
 
+});
+setTimeout(function(){
+    $('.header-primary-container .right-column').append($('#header-account'));
+}, 2000);
 // megamenu
 var megamenuUL = $('#mainmenu>ul>li>.nav-panel');
 var megamenuULclass = megamenuUL.attr('class');
@@ -873,6 +927,9 @@ var svgFacebook = '<svg id="svg-facebook" viewBox="0 0 28 28" width="30px"><path
 var facebookLink = $('.js-new-footer .ic-facebook');
 
 facebookLink.html(svgFacebook);
+
+
+
 
 
 
