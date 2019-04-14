@@ -139,8 +139,22 @@ facebookLink.html(svgFacebook);
 // FAQ
 if($('body').hasClass('kbase-category-view')){
 
+$('.kbase-category-view h1').after('<div class="js-faq_img-links"></div>');
+var faqLinks = $('.js-faq_img-links');
+for(i=1; i<=5; i++){
+    var $img = document.querySelector('.js-img-faq img:nth-child('+i+')');
+    var img = $img.outerHTML;
 
+    faqLinks.append('<a href = "#'+$img.getAttribute('alt')+'" class="js__link">'+img+'</a>');
+}
+$('.kb-category__grid').find('h2').each(function(){
+var that = $(this);
+var text = $.trim(that.text());
+var img = $('.js-img-faq').children('img[alt="'+text+'"]').clone();
+that.before(img);
+that.before('<a name="'+text+'"></a>');
 
+})
 
 }
 
