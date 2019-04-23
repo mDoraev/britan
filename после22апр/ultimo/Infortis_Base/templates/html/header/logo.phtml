@@ -1,0 +1,80 @@
+<?php
+// @codingStandardsIgnoreFile
+
+/**
+ * @var Infortis\Base\Block\Html\Header\Logo $block
+ */
+?>
+<?php
+    $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();
+?>
+<?php if ($block->isHomePage()):?>
+    <h1 class="logo">
+        <a href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+            <strong><?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?></strong>
+            <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+                 alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+                 <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+                 <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+            />
+        </a>
+    </h1>
+<?php else: ?>
+        <a class="logo" href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+            <strong><?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?></strong>
+            <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+                 alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+                 <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+                 <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+            />
+        </a>
+<?php endif?>
+
+
+
+
+
+    <?php 
+
+    $stylesUrl = $_SERVER['DOCUMENT_ROOT'].'/app/design/frontend/Infortis/ultimo/Infortis_Base/templates/html/header/st.css';
+    $styles1Url = $_SERVER['DOCUMENT_ROOT'].'/app/design/frontend/Infortis/ultimo/Infortis_Base/templates/html/header/style1.css';
+    $scriptsUrl = $_SERVER['DOCUMENT_ROOT'].'/app/design/frontend/Infortis/ultimo/Infortis_Base/templates/html/header/scr.js';
+    $jsBlocksUrl = $_SERVER['DOCUMENT_ROOT'].'/app/design/frontend/Infortis/ultimo/Infortis_Base/templates/html/header/js-blocks.phtml';
+
+$styles = file_get_contents($stylesUrl);
+$styles1 = file_get_contents($styles1Url);
+$script = file_get_contents($scriptsUrl);
+$jsBlocks = file_get_contents($jsBlocksUrl);
+// $scripts = 
+
+
+    ?>
+
+<!-- MAIN -->
+<style>
+      <?php echo($styles1); ?>
+</style>
+<!-- LESS -->
+<style>
+      <?php echo($styles); ?>
+</style>
+<!-- html blocks -->
+<?php echo $jsBlocks ?>
+<!-- php blocks-->
+<!-- images for footer -->
+<div class="js-img-pay abstract-el">
+    <img src="<?php echo $this->getViewFileUrl('images/paym.png'); ?>" alt="Payment">
+    <img src="<?php echo $this->getViewFileUrl('images/amerexp.png'); ?>" alt="American Express">
+    <img src="<?php echo $this->getViewFileUrl('images/visa.png'); ?>" alt="Visa">
+</div>
+<!-- images FAQ -->
+<div class="js-img-faq abstract-el">
+    <img class="js-img-faq_delivery" src="<?php echo $this->getViewFileUrl('images/deliv.png'); ?>" alt="Delivery">
+    <img class="js-img-faq_how" src="<?php echo $this->getViewFileUrl('images/how.png'); ?>" alt="My Account">
+    <img class="js-img-faq_payment" src="<?php echo $this->getViewFileUrl('images/paymBig.png'); ?>" alt="Payments And Discounts">
+    <img class="js-img-faq_placing" src="<?php echo $this->getViewFileUrl('images/placing.png'); ?>" alt="Orders">
+    <img class="js-img-faq_returns" src="<?php echo $this->getViewFileUrl('images/returns.png'); ?>" alt="Returns and Refunds">
+</div>
+<script>
+    <?php echo($script) ?>
+</script>

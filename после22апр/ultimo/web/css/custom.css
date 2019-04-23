@@ -1,0 +1,141 @@
+.product-view .swatch-attribute.type .swatch-option {
+    min-width: 180px;
+    height: 30px;
+    line-height: 30px !important;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-color: #44aefb;
+    color: #fff;
+    background: #30a5ff;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.product-view .swatch-attribute.dosage .swatch-option {
+    min-width: 100px;
+    height: 30px;
+    line-height: 30px !important;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-color: #44aefb;
+    color: #fff;
+    background: #30a5ff;
+    padding: 10px;
+    font-size: 13px;
+}
+.swatch-attribute.package_size select {
+    background: #30a5ff;
+    border: 1px solid #30a5ff;
+    height: 47px;
+    color: #fff;
+    line-height: 1.82857143;
+    width: 180px;
+}
+
+.swatch-attribute .swatch-option {
+    border: 0px solid rgba(0,0,0,0);
+}
+
+.swatch-attribute-selected-option {
+    display: none;
+}
+.swatch-option.selected, .swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected, .swatch-option:not(.disabled):hover, .swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
+    outline-color: #30a5ff;
+	outline: none;
+}
+.swatch-option.text.selected {
+    background-color: #30a5ff !important;
+}
+.swatch-option.text.selected:after {
+content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 14px;
+    position: absolute;
+    top: -8px;
+    right: -7px;
+    color: #44aefb;
+    background: #fff;
+    border-radius: 85px;
+    padding: 0px 5px 0px 5px;
+}
+.swatch-attribute-label {
+    position: relative;
+    display: block;
+    width: auto;
+    padding: 0;
+    color: #033b59;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 15px 0 15px 0;
+}
+.swatch-option.selected, .swatch-attribute.size .swatch-option.selected, .swatch-attribute.manufacturer .swatch-option.selected, .swatch-option:not(.disabled):hover, .swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
+    outline-color: #30a5ff;
+	outline: none;
+}
+.swatch-attribute .swatch-option:not(.disabled):hover, .swatch-attribute .swatch-option.color:not(.disabled):hover {
+    border: 0px solid rgba(0,0,0,0);
+}
+
+.product p  {
+    line-height: 25px !important;
+}
+
+
+
+
+@media (min-width: 768px) {
+.product.data.items.style-luma.show-tabs>.item.content {
+    background: transparent !important;
+    margin-top: 43px;
+    padding: 35px 35px 35px 35px;
+    border: 0px solid #d1d1d1 !important;
+}
+.product.data.items.style-luma.show-tabs>.item.title>.switch {
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 1.4rem;
+    color: #7d7d7d;
+    text-decoration: none;
+    background: transparent !important;
+    border: 0px solid #d1d1d1 !important;
+    border-bottom: none;
+    height: 54px !important;
+    padding: 1px 35px 1px 35px;
+}
+.product.data.items.style-luma.show-tabs>.item.content {
+    margin-top: 20px;
+    box-sizing: border-box;
+    float: right !important;
+    margin-left: -100%;
+    width: 79% !important;
+}
+.product.data.items.style-luma.show-tabs>.item.title {
+    float: none !important;
+    width: 20% !important;
+}
+
+.product #product_cms_block2 {margin-top:-250px;display:none;}
+.product #reviews{margin-top: -130px; display:none;}
+.product #product_cms_block1 {margin-top: -190px; display:none;}
+.product #description {margin-top: -80px; }
+.product-lower-primary-column{background: #e2f3fe;padding: 50px 0px;}
+.product.data.items.style-luma .item.title>.switch strong {
+    font-weight: normal;
+    font-size: 20px;
+}
+.product.data.items.style-luma.show-tabs>.item.title:not(.disabled)>.switch:active, .product.data.items.style-luma.show-tabs>.item.title.active>.switch, .product.data.items.style-luma.show-tabs>.item.title.active>.switch:focus, .product.data.items.style-luma.show-tabs>.item.title.active>.switch:hover {
+    color: #30a5ff !important;
+}
+
+.data.item.title.active:after {
+content: "\f054";
+    font-family: FontAwesome;
+    font-size: 14px;
+    position: absolute;
+    font-weight: 400;
+    top: 14px;
+    left: 200px;
+    margin-left: 3px;
+    color: #30a5ff;
+}
+}
