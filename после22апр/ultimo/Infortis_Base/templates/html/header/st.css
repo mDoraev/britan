@@ -307,3 +307,257 @@
     text-align: left;
   }
 }
+.customer-account-login .main,
+.customer-account-create .main {
+  font-size: 20px;
+}
+.customer-account-login .main .page-title,
+.customer-account-create .main .page-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.customer-account-login .main .form-create-account,
+.customer-account-create .main .form-create-account,
+.customer-account-login .main .form-login,
+.customer-account-create .main .form-login {
+  margin-left: auto;
+  margin-right: auto;
+}
+.customer-account-login .main .form-create-account .password-strength-meter,
+.customer-account-create .main .form-create-account .password-strength-meter,
+.customer-account-login .main .form-login .password-strength-meter,
+.customer-account-create .main .form-login .password-strength-meter {
+  margin-top: 10px;
+  height: auto;
+  min-height: 50px;
+  background-color: #edf5f6;
+  line-height: 50px;
+}
+.customer-account-login .main .form-create-account input.input-text,
+.customer-account-create .main .form-create-account input.input-text,
+.customer-account-login .main .form-login input.input-text,
+.customer-account-create .main .form-login input.input-text,
+.customer-account-login .main .form-create-account select,
+.customer-account-create .main .form-create-account select,
+.customer-account-login .main .form-login select,
+.customer-account-create .main .form-login select {
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+  height: 50px;
+  border: 1px solid #c0dadf;
+  border-radius: 3px;
+  width: 100%;
+  padding: 0 15px;
+}
+.customer-account-login .main .form-create-account .control,
+.customer-account-create .main .form-create-account .control,
+.customer-account-login .main .form-login .control,
+.customer-account-create .main .form-login .control {
+  width: 100% !important;
+}
+.customer-account-login .main .form-create-account label,
+.customer-account-create .main .form-create-account label,
+.customer-account-login .main .form-login label,
+.customer-account-create .main .form-login label {
+  text-align: left !important;
+  color: #020134;
+  font-size: 16px;
+  margin-bottom: 5px !important;
+  width: 100% !important;
+}
+.customer-account-login .main .form-create-account .actions-toolbar,
+.customer-account-create .main .form-create-account .actions-toolbar,
+.customer-account-login .main .form-login .actions-toolbar,
+.customer-account-create .main .form-login .actions-toolbar {
+  display: none;
+  width: 100%;
+  margin: 0 !important;
+  text-align: center;
+  margin-top: 40px;
+}
+.customer-account-login .main .form-create-account .actions-toolbar.show,
+.customer-account-create .main .form-create-account .actions-toolbar.show,
+.customer-account-login .main .form-login .actions-toolbar.show,
+.customer-account-create .main .form-login .actions-toolbar.show {
+  display: block;
+}
+.customer-account-login .main .form-create-account div.primary,
+.customer-account-create .main .form-create-account div.primary,
+.customer-account-login .main .form-login div.primary,
+.customer-account-create .main .form-login div.primary {
+  width: 100%;
+  text-align: center;
+}
+.customer-account-login .main .form-create-account .action.primary:hover,
+.customer-account-create .main .form-create-account .action.primary:hover,
+.customer-account-login .main .form-login .action.primary:hover,
+.customer-account-create .main .form-login .action.primary:hover,
+.customer-account-login .main .form-create-account .action.primary:focus,
+.customer-account-create .main .form-create-account .action.primary:focus,
+.customer-account-login .main .form-login .action.primary:focus,
+.customer-account-create .main .form-login .action.primary:focus,
+.customer-account-login .main .form-create-account .action.primary,
+.customer-account-create .main .form-create-account .action.primary,
+.customer-account-login .main .form-login .action.primary,
+.customer-account-create .main .form-login .action.primary {
+  background-color: #3035ba;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 24px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  float: none;
+  margin-top: 30px;
+}
+.customer-account-login .main .form-create-account .secondary,
+.customer-account-create .main .form-create-account .secondary,
+.customer-account-login .main .form-login .secondary,
+.customer-account-create .main .form-login .secondary {
+  float: none;
+  width: 100%;
+}
+.customer-account-login .main .form-create-account .secondary a,
+.customer-account-create .main .form-create-account .secondary a,
+.customer-account-login .main .form-login .secondary a,
+.customer-account-create .main .form-login .secondary a {
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #020134 !important;
+}
+.customer-account-login .main .form-create-account .secondary a:hover,
+.customer-account-create .main .form-create-account .secondary a:hover,
+.customer-account-login .main .form-login .secondary a:hover,
+.customer-account-create .main .form-login .secondary a:hover {
+  opacity: 0.8;
+}
+.customer-account-login .main .form-create-account .primary:hover,
+.customer-account-create .main .form-create-account .primary:hover,
+.customer-account-login .main .form-login .primary:hover,
+.customer-account-create .main .form-login .primary:hover {
+  opacity: 0.8 !important;
+}
+.customer-account-login .main .login-container .fieldset:after,
+.customer-account-create .main .login-container .fieldset:after {
+  display: none;
+}
+.customer-account-login .main .block-title,
+.customer-account-create .main .block-title {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 40px !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+}
+.customer-account-login .main .block-new-customer .block-title,
+.customer-account-create .main .block-new-customer .block-title {
+  background-color: #edf5f6;
+}
+.customer-account-login .main .form-create-account .actions-toolbar,
+.customer-account-create .main .form-create-account .actions-toolbar {
+  display: block;
+}
+.customer-account-login .main .form-create-account .actions-toolbar button,
+.customer-account-create .main .form-create-account .actions-toolbar button {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+.customer-account-login .main .form-create-account #gender,
+.customer-account-create .main .form-create-account #gender {
+  display: none;
+}
+.customer-account-login .main .form-create-account .gender-btn,
+.customer-account-create .main .form-create-account .gender-btn {
+  font-size: 30px;
+  color: #3035ba;
+  padding: 5px 10px;
+  float: left;
+  width: 100px;
+  border-radius: 6px;
+  border: 1px solid #c0dadf;
+  margin-right: 20px;
+  cursor: pointer;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 500px) {
+  .customer-account-login .main .form-create-account .gender-btn,
+  .customer-account-create .main .form-create-account .gender-btn {
+    margin-right: 0;
+    max-width: 50%;
+  }
+}
+.customer-account-login .main .form-create-account .gender-btn span,
+.customer-account-create .main .form-create-account .gender-btn span {
+  color: #020134;
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+.customer-account-login .main .form-create-account .gender-btn:hover,
+.customer-account-create .main .form-create-account .gender-btn:hover {
+  background-color: #c0dadf;
+}
+.customer-account-login .main .form-create-account .gender-btn.gender-btn-active,
+.customer-account-create .main .form-create-account .gender-btn.gender-btn-active {
+  background-color: #3035ba;
+  color: #fff;
+}
+.customer-account-login .main .form-create-account .gender-btn.gender-btn-active span,
+.customer-account-create .main .form-create-account .gender-btn.gender-btn-active span {
+  color: inherit;
+}
+.customer-account-login .main .actions-toolbar div.primary,
+.customer-account-create .main .actions-toolbar div.primary {
+  width: 100%;
+  text-align: center;
+}
+.customer-account-login .main a.action.create.primary,
+.customer-account-create .main a.action.create.primary {
+  background-color: #3035ba;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 24px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  float: none;
+  margin-top: 10px;
+}
+.customer-account-login .main a.action.create.primary:hover,
+.customer-account-create .main a.action.create.primary:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1200px) and (min-width: 770px) {
+  .hp-block.central-column.grid12-6 {
+    width: 32%;
+  }
+}
+@media (max-width: 770px) {
+  .header-primary-container {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  #newsletter {
+    font-size: 13px;
+  }
+}

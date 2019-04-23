@@ -158,8 +158,47 @@ that.before('<a name="'+text+'"></a>');
 
 }
 
+if($('body').hasClass('customer-account-login')){
+    var parent = $('.actions-toolbar');
+var loginBtn = $('button.action.login.primary');
+var secondary = $('.block-customer-login .secondary');
+loginBtn.parent().before(secondary);
+parent.addClass('show');
 
 
+}
+if($('body').hasClass('customer-account-create')){
+var selectG = $('#gender');
+var absrtactG = $('.gender-btn-cont');
+selectG.after('<div class="abstract-wrap gender-btn-wrap"></div>');
+var parentBtnG = $('.gender-btn-wrap');
+parentBtnG.html(absrtactG);
+
+var btnMale = parentBtnG.find('.gender-btn-cont__male');
+var btnFemale = parentBtnG.find('.gender-btn-cont__female');
+
+function selectGender(el, num){
+        thatBtnG = $(el);
+        $('.gender-btn').removeClass('gender-btn-active');
+    thatBtnG.addClass('gender-btn-active');
+selectG.val(num);
+}
+btnMale.on('click', function (){
+    selectGender(this, 1);
+
+})
+
+
+btnFemale.on('click', function(){
+    selectGender(this, 2);
+
+    
+})
+
+
+
+
+}
 
 
     });
